@@ -1,5 +1,9 @@
-function App() {
-  return <h1>Hello Redux</h1>;
+import React from 'react';
+
+// import { Container } from './styles';
+
+function src() {
+  return <div>Hello Redux</div>;
 }
 
-export default App;
+export default src;
