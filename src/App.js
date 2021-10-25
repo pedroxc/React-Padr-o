@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-// import { Container } from './styles';
+function App() {
+  const [tech, setTech] = useState(['ReactJS', 'React Native']);
 
-function src() {
-  return <div>Hello Redux</div>;
+  function handleAdd() {
+    setTech([...tech, 'node.js']);
+  }
+  return (
+    <>
+      <ul>
+        {tech.map((t) => (
+          <li key={t}>{t}</li>
+        ))}
+      </ul>
+      <button type="button" onClick={handleAdd}>
+        Adicionar
+      </button>
+    </>
+  );
 }
 
-export default src;
+export default App;
